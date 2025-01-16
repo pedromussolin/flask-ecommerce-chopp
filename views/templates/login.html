@@ -1,34 +1,24 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">
-    <title>Login</title>
-</head>
+{% block title %}Login{% endblock %}
+{% block styles %}<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">{% endblock %}
 
-<body>
-    <img src="{{ url_for('static', filename='img/logo.webp') }}" alt="logo">
+{% block content %}
+<form id="form">
+    <label for="name">Nome:</label>
+    <input type="text" name="name" id="name" required>
+    <br>
 
-    <form id="form">
-        <label for="name">Nome:</label>
-        <input type="text" name="name" id="name" required>
-        <br>
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required>
+    <br>
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" required>
-        <br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" required>
+    <br>
+    
+    <button type="submit">Login</button>
+</form>
 
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" required>
-        <br>
-        
-        <button type="submit">Login</button>
-    </form>
-
-    <a href="{{ url_for('user.signup') }}">Cadastre-se</a>
-</body>
-
-</html>
+<a href="{{ url_for('user.signup') }}">Cadastre-se</a>
+{% endblock %}

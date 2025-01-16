@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+
+/* Header */
+header {
+    font-family: 'Germania One', cursive;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+#navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Menu Container */
+#menu-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Navegação do Menu */
+#menu-navigation {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+/* Estilo dos itens de menu */
+.menu-item {
+    font-size: 25px;
+    position: relative;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Link do item de menu */
+.menu-item > a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    text-align: center;
+    padding: 5px 15px;
+}
+
+/* Estilo do ícone de seta */
+.menu-item > .material-symbols-outlined {
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* Submenu */
+.submenu-navigation {
+    display: none;
+    position: absolute;
+    top: 100%; /* Coloca o submenu abaixo do menu-item */
+    left: 0;
+    width: 100%; /* Faz o submenu ter a mesma largura do item de menu */
+    text-align: center;
+}
+
+/* Exibe o submenu ao passar o mouse sobre o item de menu */
+.menu-item:hover .submenu-navigation {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo dos itens dentro do submenu */
+.submenu-item {
+    color: white;
+    border-bottom: 2px solid white;
+    text-decoration: dashed;
+    width: 100%; /* Faz com que os itens do submenu ocupem toda a largura do item de menu */
+    padding: 10px 0px;
+    background-color: #184235;
+    white-space: nowrap; /* Impede a quebra de linha nos itens */
+}
+
+.submenu-item:hover {
+    cursor: pointer;
+    background-color: #215747;
+}
+
+/* Link dos itens do submenu */
+.submenu-item a {
+    
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Estilo do botão "Compre Aqui" */
+#compre-aqui-button {
+    cursor: pointer;
+    font-size: 25px;
+    padding: 5px 30px;
+    background-color: #184235;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#compre-aqui-button:hover {
+    background-color: #215747;
+}
+
+/* Logo */
+#logo {
+    height: 40px;
+    margin-left: 20px;
+}
+
+/* Footer */
+footer {
+    font-family: 'Germania One', cursive;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #000000;
+    margin-top: 20px;
+}
+

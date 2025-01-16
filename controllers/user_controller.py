@@ -13,13 +13,15 @@ def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        # Aqui você verifica o usuário e faz o login
-        # Exemplo simples:
         user = Users.query.filter_by(username=username).first()
+
         if user and check_password(password, user.password):
             session['user_id'] = user.id
+
             return redirect(url_for('main.home'))
+        
         return render_template('login.html', error="Invalid credentials")
+    
     return render_template('login.html')
 
 
@@ -29,10 +31,12 @@ def signup():
         username = request.form['username']
         password = request.form['password']
         email = request.form['email']
+
         # Adicione o novo usuário ao banco
         new_user = Users(username=username, email=email, password=hash_password(password))
         db.session.add(new_user)
         db.session.commit()
+
         return redirect(url_for('user.login'))
     
     return render_template('signup.html')
@@ -41,4 +45,5 @@ def signup():
 @user_bp.route('/logout')
 def logout():
     session.pop('user_id', None)
+    
     return redirect(url_for('user.login'))
