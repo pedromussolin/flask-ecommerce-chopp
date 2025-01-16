@@ -1,2 +1,3 @@
-# Ecommerce_Chopp
- Plataforma de ecommerce para compra e contratação de serviços de chopp
+# flask-ecommerce-chopp
+ 
+Plataforma para comercialização de produtos e serviços relacionados a chopp.
