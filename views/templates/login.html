@@ -1,34 +1,17 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">
-    <title>Login</title>
-</head>
+<form id="form" method="POST">
+    <img id="logo" src="" alt="logo">
+    
+    <input type="email" name="email" id="email" placeholder="E-mail" required>
+    <br>
 
-<body>
-    <img src="{{ url_for('static', filename='img/logo.webp') }}" alt="logo">
+    <input type="password" name="password" placeholder="Senha" id="password" required>
+    <br>
+    
+    <button type="submit">Login</button>
 
-    <form id="form">
-        <label for="name">Nome:</label>
-        <input type="text" name="name" id="name" required>
-        <br>
+    <span style="color: red;">{{ error }}</span>
+</form>
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" required>
-        <br>
 
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" required>
-        <br>
-        
-        <button type="submit">Login</button>
-    </form>
-
-    <a href="{{ url_for('user.signup') }}">Cadastre-se</a>
-</body>
-
-</html>
+<a id="cadastro-link" href="{{ url_for('user.signup') }}">Não tem uma conta? Cadastre-se</a>

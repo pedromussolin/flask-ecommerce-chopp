@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Bakbak+One&display=swap');
+
+
+/* Header */
+header {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+#navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Menu Container */
+#menu-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Navegação do Menu */
+#menu-navigation {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+/* Estilo dos itens de menu */
+.menu-item {
+    font-size: 25px;
+    position: relative;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Link do item de menu */
+.menu-item > a {
+    font-family: "Bakbak One", serif !important;
+    font-weight: 400;
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    text-align: center;
+    padding: 5px 15px;
+}
+
+
+.submenu-navigation {
+    font-family: "Bakbak One", serif !important;
+    font-weight: 400;
+    font-size: 16px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+.menu-item:hover .submenu-navigation {
+    display: flex;
+    flex-direction: column;
+}
+
+.submenu-item {
+    color: white;
+    border-bottom: 2px solid white;
+    text-decoration: dashed;
+    width: 100%;
+    padding: 10px 0px;
+    background-color: #184235;
+    white-space: nowrap;
+}
+
+.submenu-item:hover {
+    cursor: pointer;
+    background-color: #215747;
+}
+
+.submenu-item a {
+    
+    text-decoration: none;
+    color: white;
+}
+
+#compre-aqui-button {
+    font-family: "Bakbak One", serif !important;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 5px 30px;
+    background-color: #184235;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#compre-aqui-button:hover {
+    background-color: #215747;
+}
+
+#logo {
+    height: 40px;
+    margin-left: 20px;
+}
+
+footer {
+    font-family: "Bakbak One", serif !important;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #000000;
+    margin-top: 20px;
+}
+
