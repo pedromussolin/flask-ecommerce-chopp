@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Bakbak+One&display=swap');
+
 
 /* Header */
 header {
-    font-family: 'Germania One', cursive;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
@@ -44,6 +44,9 @@ header {
 
 /* Link do item de menu */
 .menu-item > a {
+    font-family: "Bakbak One", serif !important;
+    font-weight: 400;
+    font-size: 20px;
     text-decoration: none;
     color: #333;
     display: block;
@@ -51,37 +54,33 @@ header {
     padding: 5px 15px;
 }
 
-/* Estilo do ícone de seta */
-.menu-item > .material-symbols-outlined {
-    vertical-align: middle;
-    margin-left: 5px;
-}
 
-/* Submenu */
 .submenu-navigation {
+    font-family: "Bakbak One", serif !important;
+    font-weight: 400;
+    font-size: 16px;
     display: none;
     position: absolute;
-    top: 100%; /* Coloca o submenu abaixo do menu-item */
+    top: 100%;
     left: 0;
-    width: 100%; /* Faz o submenu ter a mesma largura do item de menu */
+    width: 100%;
     text-align: center;
 }
 
-/* Exibe o submenu ao passar o mouse sobre o item de menu */
+
 .menu-item:hover .submenu-navigation {
     display: flex;
     flex-direction: column;
 }
 
-/* Estilo dos itens dentro do submenu */
 .submenu-item {
     color: white;
     border-bottom: 2px solid white;
     text-decoration: dashed;
-    width: 100%; /* Faz com que os itens do submenu ocupem toda a largura do item de menu */
+    width: 100%;
     padding: 10px 0px;
     background-color: #184235;
-    white-space: nowrap; /* Impede a quebra de linha nos itens */
+    white-space: nowrap;
 }
 
 .submenu-item:hover {
@@ -89,18 +88,17 @@ header {
     background-color: #215747;
 }
 
-/* Link dos itens do submenu */
 .submenu-item a {
     
     text-decoration: none;
     color: white;
 }
 
-
-/* Estilo do botão "Compre Aqui" */
 #compre-aqui-button {
+    font-family: "Bakbak One", serif !important;
+    font-size: 18px;
+    font-weight: 400;
     cursor: pointer;
-    font-size: 25px;
     padding: 5px 30px;
     background-color: #184235;
     color: #fff;
@@ -113,15 +111,13 @@ header {
     background-color: #215747;
 }
 
-/* Logo */
 #logo {
     height: 40px;
     margin-left: 20px;
 }
 
-/* Footer */
 footer {
-    font-family: 'Germania One', cursive;
+    font-family: "Bakbak One", serif !important;
     text-align: center;
     padding: 20px;
     background-color: #f4f4f4;

@@ -1,11 +1,18 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, redirect, url_for, session
 
 # Blueprint para o MainController
 main_bp = Blueprint('main', __name__)
 
+
 @main_bp.route('/')
+def index():
+    return redirect(url_for('main.home'))
+
+@main_bp.route('/home')
 def home():
-    return render_template('home.html')
+    name = session.get('name', None)
+    
+    return render_template('home.html', name=name)
 
 @main_bp.route('/about')
 def about():
